@@ -1,6 +1,6 @@
 {
   "name": "mask-simple-sensitive",
-  "version": "1.0.4",
+  "version": "1.0.1",
   "private": false,
   "description": "敏感数据掩码库，支持 string | object",
   "main": "lib",
