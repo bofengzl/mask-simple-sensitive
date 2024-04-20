@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true, // 允许默认导入与CommonJS模块互操作。
+    "outDir": "lib",
+    "moduleResolution": "node", // 指定如何解析模块。这里设置为"node"，意味着使用Node.js的模块解析逻辑。
+    "module": "esnext", // 指定使用哪种模块系统。这里设置为"esnext"，意味着使用最新的ECMAScript模块系统。
+    "target": "es5", // 指定ECMAScript目标版本。这里设置为"es5"，意味着编译后的代码将遵循ES5规范。
+    "allowJs": false, // 允许在项目中包含JavaScript文件。
+    "noUnusedLocals": false, // 跳过所有声明文件的类型检查。这可以加快编译速度，但可能会错过一些类型错误。
+    "preserveConstEnums": true,
+    "skipLibCheck": true, // 跳过所有声明文件的类型检查。这可以加快编译速度，但可能会错过一些类型错误。
+    "sourceMap": true, // 生成源映射文件，以便在调试时更容易地跟踪到原始TypeScript代码。
+    "inlineSources": true, // 意味着源代码会被直接嵌入到生成的 source map 文件中。这样，当你在浏览器的开发者工具中查看 source map 时，你可以直接看到源代码的内容，而不需要再去请求源代码文件。
+    "declaration": true, // 生成.d.ts文件，该文件包含类型声明。
+    "experimentalDecorators": true, // 启用实验性的装饰器支持。装饰器是一种特殊类型的声明，它可以被附加到类声明、方法、属性或参数上。
+    "downlevelIteration": true,
+    "strictNullChecks": false,
+    "baseUrl": ".",
+    "lib": [
+      "es6",
+      "dom",
+      "es2017"
+    ],
+  },
+  "exclude": [
+    "__test__",
+  ],
+  "include": [
+    "src",
+    "rollup.config.js"
+  ]
+}

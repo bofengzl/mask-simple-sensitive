@@ -1,0 +1,52 @@
+{
+  "name": "mask-simple-sensitive",
+  "version": "1.0.4",
+  "private": false,
+  "description": "敏感数据掩码库，支持 string | object",
+  "main": "lib",
+  "module": "esm",
+  "umd:main": "dist/main.js",
+  "unpkg": "dist/main.js",
+  "jsdelivr": "dist/main.js",
+  "files": [
+    "esm",
+    "lib",
+    "dist"
+  ],
+  "scripts": {
+    "build": "npx rimraf -rf lib esm dist && npm run build:cjs && npm run build:esm && npm run build:umd",
+    "build:cjs": "tsc --project tsconfig.json",
+    "build:esm": "tsc --project tsconfig.json --module es2015 --outDir esm",
+    "build:umd": "rollup --config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bofengzl/mask-simple-sensitive.git"
+  },
+  "keywords": [
+    "mask",
+    "sensitive"
+  ],
+  "author": "bofeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bofengzl/mask-simple-sensitive/issues"
+  },
+  "homepage": "https://github.com/bofengzl/mask-simple-sensitive#readme",
+  "types": "esm/index.d.ts",
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.7.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-jest": "^28.2.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "rollup": "^4.14.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5"
+  }
+}
